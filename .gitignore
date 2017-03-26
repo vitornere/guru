@@ -1,0 +1,3 @@
+# Cached builds
+__pycache__/
+*.sqlite3
