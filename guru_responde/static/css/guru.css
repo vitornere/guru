@@ -1,0 +1,46 @@
+.header {
+	background-color: rgb(143, 34, 219); 
+	width: 100%; 
+	margin:0;
+}
+.header .col-md-12 {
+	text-align: center;
+}
+.header h1 {
+	color: white;
+	margin-bottom: 20px;
+	font-family: 'Baloo Bhaina', cursive;
+}
+.questions {
+	margin-top: 20px;
+}
+.questions h3 {
+	border-bottom: 5px solid;
+	color: rgb(252, 206, 5);
+	width: 700px;
+	padding-bottom: 3px;
+}
+a, p {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.questions h3 a {
+	text-decoration: none;
+}
+.questions h3 a {
+    color: #FCA205;
+}
+.questions h3 a:hover {
+	color: rgb(20, 115, 240);
+}
+/*
+.questions h3 a:visited:hover {
+	color: black;
+}
+.questions h3 a:hover, .questions h3 a:active, .questions h3 a:visited {
+	color: rgb(20, 115, 240);
+}
+*/
+#open-question, #closed-question {
+	margin-left: 100px;
+}

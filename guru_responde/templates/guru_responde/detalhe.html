@@ -1,0 +1,27 @@
+{% extends "guru/base.html" %}
+
+{% block container %}
+	
+	<h2>{{ pergunta }}</h2>
+	<div class="row">
+		<h3>Descrição</h3>
+		<p>{{pergunta.texto}}</p>
+	</div>
+
+	<div class="row">
+		<h2>Respostas</h2>
+		{% for resposta in perguntas.respostas %}
+			<div class="row">
+				<div class="row">resposta.texto</div>
+				<div class="col-md-6">
+					<p>Publicado em: {{ resposta.data_de_criacao }}</p>
+				</div>
+				<div class="col-md-6">
+					<p>Autor: {{ resposta.autor }}</p>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+	
+
+{% endblock %}

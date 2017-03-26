@@ -1,0 +1,43 @@
+{% extends "guru/base.html" %}
+
+{% block container %}
+	<div class="row questions">
+		<h2>Perguntas Abertas</h2>
+		{% for pergunta in perguntas %}
+			{% if not pergunta.data_de_fechamento %}
+				<div class="row" id="open-question">
+					<div class="row">
+						<h3><a href="/{{ pergunta.id }}/">{{ pergunta.titulo }}</a></h3>
+					</div>
+					<div class="col-md-6 date">
+						<p>Publicado em: {{ pergunta.data_de_criacao }}</p>
+					</div>
+					<div class="col-md-6">
+						<p>Autor: {{ pergunta.autor }}</p>
+					</div>
+				</div>
+			{% endif %}
+		{% endfor %}
+
+	</div>
+
+	<div class="row questions">
+		<h2>Perguntas Resolvidas</h2>
+
+		{% for pergunta in perguntas %}
+			{% if pergunta.data_de_fechamento %}
+				<div class="row" id="closed-question">
+					<div class="row">
+						<h3 id="pergunta_titulo"><a href="/{{ pergunta.id }}/">{{ pergunta.titulo }}</a></h3>
+					</div>
+					<div class="col-md-6">
+						<p>Publicado em: {{ pergunta.data_de_criacao }}</p>
+					</div>
+					<div class="col-md-6">
+						<p>Autor: {{ pergunta.autor }}</p>
+					</div>
+				</div>
+			{% endif %}
+		{% endfor %}
+	</div>	
+{% endblock %}
