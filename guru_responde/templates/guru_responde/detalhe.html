@@ -10,9 +10,9 @@
 
 	<div class="row">
 		<h2>Respostas</h2>
-		{% for resposta in perguntas.respostas %}
+		{% for resposta in pergunta.resposta_set.all %}
 			<div class="row">
-				<div class="row">resposta.texto</div>
+				<div class="row">{{ resposta.texto }}</div>
 				<div class="col-md-6">
 					<p>Publicado em: {{ resposta.data_de_criacao }}</p>
 				</div>
