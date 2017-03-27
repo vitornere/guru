@@ -2,26 +2,34 @@
 
 {% block container %}
 	
-	<h2>{{ pergunta }}</h2>
+	<div class="row titulo-pergunta">
+		<h2>{{ pergunta }}</h2>
+	</div>
 	<div class="row">
 		<h3>Descrição</h3>
 		<p>{{pergunta.texto}}</p>
 	</div>
 
-	<div class="row">
-		<h2>Respostas</h2>
+	<div class="row answers">
+		<h2>{{ pergunta.resposta_set.count }} Respostas</h2>
 		{% for resposta in pergunta.resposta_set.all %}
-			<div class="row">
-				<div class="row">{{ resposta.texto }}</div>
-				<div class="col-md-6">
+			<div class="row" id="answer">
+				<div class="row"><h3>{{ resposta.texto }}</h3></div>
+				<div class="row date">
 					<p>Publicado em: {{ resposta.data_de_criacao }}</p>
 				</div>
-				<div class="col-md-6">
+				<div class="row autor">
 					<p>Autor: {{ resposta.autor }}</p>
 				</div>
+				<div class="row" id="line-bottom"></div>
 			</div>
 		{% endfor %}
 	</div>
 	
+	<div class="form-group responder">
+	  <label for="comment">Responder:</label>
+	  <textarea class="form-control" rows="5" id="responder-text"></textarea>
+	  <button type="button" class="btn btn-primary">Enviar</button>
+	</div>
 
 {% endblock %}
