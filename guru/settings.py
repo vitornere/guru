@@ -25,7 +25,7 @@ SECRET_KEY = 'ab(0c$du4-5de45m0-su2-5+lfk(ai!6#@s-1b=(2x0h42-49b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [vitornere.pythonanywhere.com]
 
 
 # Application definition
