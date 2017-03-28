@@ -1,2 +1,4 @@
 Django>=1.8.5,<1.8.6
 wagtail>=1.9,<1.10
+django-bootstrap-form
+whitenoise>=2.0,<2.1

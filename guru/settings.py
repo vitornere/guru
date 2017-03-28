@@ -25,7 +25,7 @@ SECRET_KEY = 'ab(0c$du4-5de45m0-su2-5+lfk(ai!6#@s-1b=(2x0h42-49b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [vitornere.pythonanywhere.com]
+ALLOWED_HOSTS = ['vitornere.pythonanywhere.com']
 
 
 # Application definition
@@ -121,7 +121,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-STATIC_URL = '../guru_responde/static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 #WAGTAIL_SITE_NAME = "Guru"
