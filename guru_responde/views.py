@@ -37,7 +37,8 @@ def nova_pergunta(request):
 			data_de_criacao = timezone.now()
 			pergunta = Pergunta.objects.create(autor=autor, titulo=titulo, texto=texto, data_de_criacao=data_de_criacao, data_de_fechamento=None)
 			pergunta.save()
-			return render(request, 'guru_responde/detalhe.html', {'pergunta' : pergunta})
+			form = ComentarioForm()
+			return render(request, 'guru_responde/detalhe.html', {'pergunta' : pergunta, 'form' : form})
 		else:
 			return render(request, 'guru_responde/nova_pergunta.html', {'form' : form})
 	else:
