@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import Pergunta
 from django.utils import timezone
 from .forms import PerguntaForm, ComentarioForm
+from django.contrib.auth.models import User
 
 # Create your views here.
 def pergunta(request):
@@ -14,7 +15,7 @@ def detalhe(request, pergunta_id):
 		form = ComentarioForm(request.POST)
 		if form.is_valid():
 			texto = form.cleaned_data['comentario'];
-			autor = request.user
+			autor = User.objects.get(id=1)
 			data_de_criacao = timezone.now()
 			comentario = pergunta.resposta_set.create(autor=autor, texto=texto, data_de_criacao=data_de_criacao)
 			comentario.save()
@@ -33,7 +34,7 @@ def nova_pergunta(request):
 		if form.is_valid():
 			titulo = form.cleaned_data['titulo']
 			texto = form.cleaned_data['pergunta']
-			autor = request.user
+			autor = User.objects.get(id=1)
 			data_de_criacao = timezone.now()
 			pergunta = Pergunta.objects.create(autor=autor, titulo=titulo, texto=texto, data_de_criacao=data_de_criacao, data_de_fechamento=None)
 			pergunta.save()
