@@ -1,4 +1,8 @@
 from django import forms
 
-class NameForm(forms.Form):
-    nova_pergunta = forms.Textarea()
+class PerguntaForm(forms.Form):
+	titulo = forms.CharField(max_length=200)
+	pergunta = forms.CharField(widget=forms.Textarea)
+
+class ComentarioForm(forms.Form):
+	comentario = forms.CharField(widget=forms.Textarea)

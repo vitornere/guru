@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = (
     'guru',
     'guru_responde',
+    'bootstrapform',
 
 #    'wagtail.wagtailforms',
 #    'wagtail.wagtailredirects',

@@ -3,7 +3,7 @@
 {% block container %}
 	<div class="row questions">
 		<h2>Perguntas Abertas</h2>
-		{% for pergunta in perguntas %}
+		{% for pergunta in perguntas.reverse %}
 			{% if not pergunta.data_de_fechamento %}
 				<div class="row" id="open-question">
 					<div class="row">
@@ -24,7 +24,7 @@
 	<div class="row questions">
 		<h2>Perguntas Resolvidas</h2>
 
-		{% for pergunta in perguntas %}
+		{% for pergunta in perguntas.reverse %}
 			{% if pergunta.data_de_fechamento %}
 				<div class="row" id="closed-question">
 					<div class="row">

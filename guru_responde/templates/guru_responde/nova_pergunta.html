@@ -1,16 +1,18 @@
 {% extends "guru/base.html" %}
+{% load bootstrap %}
 
 {% block container %}
 
 	<div class="row">
 		<h1>Nova Pergunta</h1>
 
-		{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
-
-		<form action="nova_pergunta" method="post" class="post-form">
-			<textarea class="form-control" rows="5" id="nova_pergunta"></textarea>
-	        <button type="submit" class="save btn btn-default">Enviar</button>
-	    </form>
+		<form class="form" role="form">
+			{% csrf_token %}
+			{{ form|bootstrap }}
+			<div class="form-group">
+				<button type="submit" id="pergunta_buttom" formmethod="POST" class="btn btn-primary">Enviar</button>
+			</div>
+		</form>
 	</div>
 
 {% endblock %}

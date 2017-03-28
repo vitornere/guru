@@ -1,4 +1,5 @@
 {% extends "guru/base.html" %}
+{% load bootstrap %}
 
 {% block container %}
 	
@@ -27,9 +28,13 @@
 	</div>
 	
 	<div class="form-group responder">
-	  <label for="comment">Responder:</label>
-	  <textarea class="form-control" rows="5" id="responder-text"></textarea>
-	  <button type="button" class="btn btn-primary">Enviar</button>
+	  <form class="form" role="form">
+		{% csrf_token %}
+		{{ form|bootstrap }}
+		<div class="form-group">
+			<button type="submit" id="comentario_buttom" formmethod="POST" class="btn btn-primary">Enviar</button>
+		</div>
+	</form>
 	</div>
 
 {% endblock %}
