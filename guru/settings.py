@@ -27,12 +27,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['vitornere.pythonanywhere.com']
 
-
 # Application definition
 
 INSTALLED_APPS = (
     'guru',
     'guru_responde',
+    'accounts',
     'bootstrapform',
 
 #    'wagtail.wagtailforms',
@@ -127,3 +127,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 #WAGTAIL_SITE_NAME = "Guru"
 
 #BASE_URL = 'http://localhost:8000'
+
+LOGIN_REDIRECT_URL = 'pergunta'

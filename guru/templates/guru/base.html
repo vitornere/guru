@@ -11,7 +11,7 @@
 		
     <body>
 	    <div class="header row">
-	    	<div class="col-md-1"><a href="/"><button type="button" id="botao-home" class="btn btn-warning btn-lg">Home</button></a></div>
+	    	<div class="col-md-1"><a href="/home/"><button type="button" id="botao-home" class="btn btn-warning btn-lg">Home</button></a></div>
     		<div class="col-md-9">
 	    		<h1>
 	    			Bem Vindo ao Guru Online
@@ -29,5 +29,18 @@
 		<script type="text/javascript" href="{% static 'js/bootstrap.min.js' %}"></script>
     </body>
 
-	<footer></footer>
+	<footer>
+		<div class="footer row">
+			{% if request.user and request.user.is_authenticated %}
+				<div class="row user">
+					<p>Usuário: {{ request.user.first_name }}</p>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<a href="{% url 'accounts.views.logout' %}"><button type="button" id="botao-logout" class="btn btn-warning btn-lg">Logout</button></a>
+					</div>
+				</div>
+			{% endif %}
+		</div>
+	</footer>
 </html>
