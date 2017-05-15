@@ -35,21 +35,6 @@ INSTALLED_APPS = (
     'accounts',
     'bootstrapform',
 
-#    'wagtail.wagtailforms',
-#    'wagtail.wagtailredirects',
-#    'wagtail.wagtailembeds',
-#    'wagtail.wagtailsites',
-#    'wagtail.wagtailusers',
-#    'wagtail.wagtailsnippets',
-#    'wagtail.wagtaildocs',
-#    'wagtail.wagtailimages',
-#    'wagtail.wagtailsearch',
-#    'wagtail.wagtailadmin',
-#    'wagtail.wagtailcore',
-
-    'modelcluster',
-    'taggit',
-
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
