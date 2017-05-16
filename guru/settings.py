@@ -52,9 +52,6 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-
-#    'wagtail.wagtailcore.middleware.SiteMiddleware',
-#    'wagtail.wagtailredirects.middleware.RedirectMiddleware',
 )
 
 ROOT_URLCONF = 'guru.urls'
@@ -108,8 +105,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
-#WAGTAIL_SITE_NAME = "Guru"
 
 #BASE_URL = 'http://localhost:8000'
 
