@@ -18,3 +18,4 @@ script:
 
 after_success:
     - coveralls
+    - CODECLIMATE_REPO_TOKEN=7f36a040275edf80bb954dda2025f501da1cb8668e4a24c047bedc546db6d56a codeclimate-test-reporter
