@@ -16,10 +16,12 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Pergunta',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('id', models.AutoField(verbose_name='ID',
+                 serialize=False, auto_created=True, primary_key=True)),
                 ('titulo', models.CharField(max_length=200)),
                 ('texto', models.TextField()),
-                ('data_de_criacao', models.DateTimeField(default=django.utils.timezone.now)),
+                ('data_de_criacao', models.DateTimeField(
+                    default=django.utils.timezone.now)),
                 ('autor', models.ForeignKey(to=settings.AUTH_USER_MODEL)),
             ],
         ),

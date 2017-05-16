@@ -17,9 +17,11 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Resposta',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', primary_key=True, serialize=False, auto_created=True)),
+                ('id', models.AutoField(verbose_name='ID',
+                 primary_key=True, serialize=False, auto_created=True)),
                 ('texto', models.TextField()),
-                ('data_de_criacao', models.DateTimeField(default=django.utils.timezone.now)),
+                ('data_de_criacao', models.DateTimeField(
+                    default=django.utils.timezone.now)),
                 ('autor', models.ForeignKey(to=settings.AUTH_USER_MODEL)),
                 ('pergunta', models.ForeignKey(to='guru_responde.Pergunta')),
             ],

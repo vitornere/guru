@@ -106,6 +106,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-#BASE_URL = 'http://localhost:8000'
+# BASE_URL = 'http://localhost:8000'
 
 LOGIN_REDIRECT_URL = 'pergunta'
